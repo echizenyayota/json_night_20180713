@@ -11,11 +11,12 @@
           var req = new XMLHttpRequest();
           // レスポンスの読み出し
           req.addEventListener("load", function() {
-              jsonObj = JSON.parse(req.reseponseText);
+              // jsonObj = JSON.parse(req.reseponseText);
+              jsonObj = req.response;
           }, false);
-          console.log(req);
-          // console.log(jsonObj);
+          // console.log(req);
           req.open("GET", "data.json", true);
+          req.responseType = "json";
           req.send(null);
       };
   </script>
