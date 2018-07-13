@@ -13,7 +13,8 @@
           req.addEventListener("load", function() {
               jsonObj = JSON.parse(req.reseponseText);
           }, false);
-          console.log(jsonObj);
+          console.log(req);
+          // console.log(jsonObj);
           req.open("GET", "data.json", true);
           req.send(null);
       };
